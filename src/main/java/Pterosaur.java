@@ -51,4 +51,29 @@ public class Pterosaur extends Dinosaur {
         }
     }
 
+    /**
+     * Simulates the Pterosaur stooping to catch prey.
+     *
+     * @param prey - Of the class FoodType and has to be of the type MEAT.
+     */
+    public void stoop(FoodType prey) {
+        if (altitude > 0 && prey == FoodType.MEAT) {
+            altitude = 1;
+            eat(prey);
+            fly();
+        }
+    }
+
+    /**
+     * Simulates foraging for plant based food or carrion. Lands to eat.
+     *
+     * @param food - Of the class FoodType.
+     */
+    public void foraging(FoodType food) {
+        if (altitude > 0) {
+            land();
+            eat(food);
+        }
+    }
+
 }
