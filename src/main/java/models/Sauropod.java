@@ -81,4 +81,13 @@ public class Sauropod extends Dinosaur {
     public void setAge(int age) {
         this.age = age;
     }
+
+    @Override
+    public String toString() {
+        return "Sauropod name: " + getName() +
+                "\nEats: " + "Plants" +
+                "\nNeck length: " + neckLength +
+                "\nWalking speed: " + walkingSpeed +
+                "\nAge: " + age;
+    }
 }
