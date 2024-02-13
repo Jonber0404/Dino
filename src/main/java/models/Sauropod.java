@@ -87,8 +87,8 @@ public class Sauropod extends Dinosaur {
     public String toString() {
         return "Sauropod name: " + getName() +
                 "\nEats: " + "Plants" +
-                "\nNeck length: " + neckLength +
-                "\nWalking speed: " + walkingSpeed +
+                "\nNeck length: " + neckLength + "meters" +
+                "\nWalking speed: " + walkingSpeed + "km/h" +
                 "\nAge: " + age;
     }
 }
