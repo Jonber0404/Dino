@@ -52,6 +52,7 @@ public class Sauropod extends Dinosaur {
      * @param hours amount of time it sleeps.
      */
     public void sleep(int hours){
+        walkingSpeed = 0;
         setEnergy(getEnergy() + (5 * hours));
         if(getEnergy() > 100){
             setEnergy(100);

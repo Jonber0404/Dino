@@ -13,12 +13,14 @@ public class Main {
         sauro.setEnergy(50);
         while(true) {
             while(true) {
-                System.out.println("This is the Diplodocus: \n" + sauro);
-                System.out.println("\nWhat do you want it to do?\n1. Walk\n2. Eat\n3. Sleep\n4. Exit");
+                System.out.println("\nWhat do you want it to do?\n1. Info\n2. Walk\n3. Eat\n4. Sleep\n5. Exit");
                 int answer = scanner.nextInt();
 
                 switch (answer) {
                     case 1:
+                        System.out.println("This is the Diplodocus: \n" + sauro);
+                        break;
+                    case 2:
                         System.out.println("You selected Walk");
 
                         double previousWalkSpeed = sauro.getWalkingSpeed();
@@ -29,7 +31,7 @@ public class Main {
                         System.out.printf("\nBefore walking, its walk speed was %.2f km/h and its previous energy was %.2f", previousWalkSpeed, previousEnergy);
                         System.out.printf("\nNow, its current walking speed is %.2f km/h and its current energy is %.2f\n ", newWalkSpeed, newEnergy);
                         break;
-                    case 2:
+                    case 3:
                         System.out.println("You selected Eat");
                         while (true) {
                             System.out.printf("What do you want it to eat?\n1. Meat\n2. Plant\n");
@@ -65,7 +67,7 @@ public class Main {
                         break;
 
 
-                    case 3:
+                    case 4:
                         System.out.println("You selected Sleep");
 
                         System.out.println("How many hours do you want it to sleep?");
@@ -77,7 +79,7 @@ public class Main {
                         System.out.printf("\nIts previous energy was %.2f\n" +
                                 "After sleeping for %d hours, its energy is %.2f\n", previousEnergy, sleepAnswer, newEnergy);
                         break;
-                    case 4:
+                    case 5:
                         System.out.println("Exiting");
                         return;
                     default:
