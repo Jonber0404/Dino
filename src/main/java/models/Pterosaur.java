@@ -70,6 +70,7 @@ public class Pterosaur extends Dinosaur {
         if (altitude > 0) {
             altitude = 0;
             speed = 0;
+            setEnergy(getEnergy() + 10);
         }
     }
 
@@ -98,6 +99,11 @@ public class Pterosaur extends Dinosaur {
             land();
             eat(food);
         }
+    }
+
+    public String toString() {
+        return String.format("Name: %s%nCarnivore: %b%nOmnivore: %b%nHerbivore: %b%nWingspan: %.2f m%nEnergy: %d",
+                getName(), isCarnivore(), isOmnivore(), isHerbivore(), wingspan, getEnergy());
     }
 
     @Override

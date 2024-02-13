@@ -1,4 +1,4 @@
-i en terminal, skriv git clone https://github.com/Jonber0404/Dino.git 
+I en terminal, skriv git clone https://github.com/Jonber0404/Dino.git 
 Navigera till Main, kompilera med mvn compile och sedan kör.
 Om du vill köra den som en jar fil, skriv mvn package och sedan kör jarfilen från target mappen 
 med java -jar target/namn på jarfilen i target.

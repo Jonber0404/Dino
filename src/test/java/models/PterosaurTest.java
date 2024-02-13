@@ -68,13 +68,13 @@ public class PterosaurTest {
         //Tests fly energy depletes to 0 during.
         pterosaur.fly(); //Our energy is 10. This depletes it to 0.
         Assertions.assertEquals(0, pterosaur.getSpeed());
-        Assertions.assertEquals(0, pterosaur.getAltitude()); //Since it lands, both altitude and speed will be 0.
-        Assertions.assertEquals(0, pterosaur.getEnergy());
+        Assertions.assertEquals(0, pterosaur.getAltitude()); //Since it lands energy will recover to 10, both altitude and speed will be 0.
+        Assertions.assertEquals(10, pterosaur.getEnergy());
 
     }
 
     /**
-     * Tests the land() method.
+     * Tests the land() method. Gains 10 energy.
      */
     @Test
     public void testLand() {
@@ -84,6 +84,7 @@ public class PterosaurTest {
 
         Assertions.assertEquals(0, pterosaur.getAltitude());
         Assertions.assertEquals(0, pterosaur.getSpeed());
+        Assertions.assertEquals(100, pterosaur.getEnergy());
     }
 
     /**
@@ -112,7 +113,7 @@ public class PterosaurTest {
 
         Assertions.assertEquals(0, pterosaur1.getAltitude());
         Assertions.assertEquals(0, pterosaur1.getSpeed());
-        Assertions.assertEquals(115, pterosaur1.getEnergy()); //Gets 25 energy from eating meat
+        Assertions.assertEquals(125, pterosaur1.getEnergy()); //Gets 25 energy from eating meat, 10 from landing.
 
         Pterosaur pterosaur2 = new Pterosaur("Quetzalcoatlus", false, true, false, 10.0);
         pterosaur2.fly();
@@ -121,6 +122,6 @@ public class PterosaurTest {
 
         Assertions.assertEquals(0, pterosaur2.getAltitude());
         Assertions.assertEquals(0, pterosaur2.getSpeed());
-        Assertions.assertEquals(65, pterosaur2.getEnergy()); //Carnivore looses 25 energy from eating plant
+        Assertions.assertEquals(75, pterosaur2.getEnergy()); //Carnivore looses 25 energy from eating plant. Gains 10 from landing.
     }
 }

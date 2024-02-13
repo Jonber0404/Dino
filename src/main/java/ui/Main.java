@@ -15,14 +15,17 @@ public class Main {
     }
 
     private static void pterosaur(Scanner scanner) {
-        Pterosaur pterosaur = new Pterosaur("hello", false, true, false, 3.9);
+        Pterosaur pterosaur = new Pterosaur("Quetzalcoatlus", false, true, false, 11.0);
         loop:
         while (true) {
-            System.out.println("\nChoose action\n1. Fly\n2. Stoop\n3. Forage\n4. Land\n5. Exit");
+            System.out.println("\nChoose action\n1. Info\n2. Fly\n3. Stoop\n4. Forage\n5. Land\n6. Exit");
             String answer = scanner.nextLine();
 
             switch (answer) {
                 case "1":
+                    System.out.println(pterosaur);
+                    break;
+                case "2":
                     if (pterosaur.getEnergy() <= 0) {
                         System.out.println("Cannot fly. Energy too low");
                     } else {
@@ -36,7 +39,7 @@ public class Main {
                     }
                     break;
 
-                case "2":
+                case "3":
                     if (pterosaur.getAltitude() <= 0) {
                         System.out.println("You have to be in the air to stoop");
                         printPterosaurStats(pterosaur);
@@ -47,7 +50,7 @@ public class Main {
                     }
                     break;
 
-                case "3":
+                case "4":
                     if (pterosaur.getAltitude() <= 0) {
                         System.out.println("You have to be in the air to forage.");
                     } else {
@@ -56,19 +59,19 @@ public class Main {
 
                         if (food.equals("1")) {
 
-                            System.out.println("*Pterosaur lands and eats fruit after searching from the air*");
+                            System.out.println("*Pterosaur lands and eats carrion after searching from the air*");
                             pterosaur.foraging(FoodType.MEAT);
                             printPterosaurStats(pterosaur);
                         } else if (food.equals("2")) {
 
-                            System.out.println("*Pterosaur lands and eats carrion after searching from the air*");
+                            System.out.println("*Pterosaur lands and eats fruit after searching from the air*");
                             pterosaur.foraging(FoodType.PLANT);
                             printPterosaurStats(pterosaur);
                         }
                     }
                     break;
 
-                case "4":
+                case "5":
                     if (pterosaur.getAltitude() <= 0) {
 
                         System.out.println("Already on the ground");
@@ -81,7 +84,7 @@ public class Main {
                     }
                     break;
 
-                case "5":
+                case "6":
                     System.out.println("Thanks for playing.");
                     break loop;
             }
