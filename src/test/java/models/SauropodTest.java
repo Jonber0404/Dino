@@ -47,7 +47,7 @@ public class SauropodTest {
     /**
      * Tests the sleep method, makes sure the energy
      * increases correctly based of how many hours
-     * the dinosaur slept
+     * the dinosaur slept.
      */
 
     @Test
