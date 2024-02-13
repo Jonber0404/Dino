@@ -47,11 +47,15 @@ public class Sauropod extends Dinosaur {
 
     /**
      * Simulates sleeping. The longer it sleeps, the
-     * more energy it regains.
+     * more energy it regains. Makes sure energy is
+     * always below 100
      * @param hours amount of time it sleeps.
      */
     public void sleep(int hours){
         setEnergy(getEnergy() + (5 * hours));
+        if(getEnergy() > 100){
+            setEnergy(100);
+        }
     }
 
     public double getNeckLength() {
