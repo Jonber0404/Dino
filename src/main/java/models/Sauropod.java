@@ -23,8 +23,8 @@ public class Sauropod extends Dinosaur {
      * below it cannot walk.
      */
     public void walk(){
-        if(getEnergy() > 0){
-            if (getEnergy() >= 50 && getEnergy() <= 100){
+        if(getEnergy() > 20){
+            if (getEnergy() >= 20 && getEnergy() <= 100){
                 if(age > 50) {
                     walkingSpeed = walkingSpeed + 3;
                 }
@@ -32,7 +32,7 @@ public class Sauropod extends Dinosaur {
                     walkingSpeed = walkingSpeed + 5;
                 }
             }
-            else if (getEnergy() > 0 && getEnergy() < 50) {
+            else if (getEnergy() > 20 && getEnergy() < 50) {
                 if(age > 50) {
                     walkingSpeed = walkingSpeed - 3;
                 }
