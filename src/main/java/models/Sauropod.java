@@ -1,10 +1,14 @@
-public class Sauropod extends Dinosaur{
+package models;
+
+import models.Dinosaur;
+
+public class Sauropod extends Dinosaur {
     private double neckLength; //meter
     private double walkingSpeed; //km/h
     private int age; //years
 
-    public Sauropod(boolean herbivore, boolean carnivore, boolean omnivore, double neckLength, double walkingSpeed, int age) {
-        super(herbivore, carnivore, omnivore);
+    public Sauropod(String name, boolean herbivore, boolean carnivore, boolean omnivore, double neckLength, double walkingSpeed, int age) {
+        super(name, herbivore, carnivore, omnivore);
         this.neckLength = neckLength;
         this.walkingSpeed = walkingSpeed;
         this.age = age;
