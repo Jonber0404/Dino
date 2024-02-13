@@ -3,9 +3,9 @@ package ui;
 import java.util.Scanner;
 
 public class Main {
-    private void pterosaur() {}
-    private void sauropod() {}
-    private void theropod() {}
+    private static void pterosaur() {}
+    private static void sauropod() {}
+    private static void theropod() {}
 
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
