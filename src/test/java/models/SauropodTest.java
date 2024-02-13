@@ -5,6 +5,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class SauropodTest {
 
+    /**
+     * Tests walk method, checks that the
+     * energy decreases and the walkingSpeed increases
+     */
     @Test
     public void testWalk(){
         Sauropod dino1 = new Sauropod
@@ -18,6 +22,11 @@ public class SauropodTest {
         assertTrue(dino1.getEnergy() < 100);
     }
 
+    /**
+     * Tests walk method on an older dinosaur,
+     * compares it with a younger dinosaur and makes
+     * sure the younger dinosaur walks faster
+     */
     @Test
     public void testWalkOlderSauropod(){
         Sauropod dino1 = new Sauropod
@@ -31,9 +40,15 @@ public class SauropodTest {
         dino1.walk();
         dino2.walk();
         assertEquals(dino1.getEnergy(), dino2.getEnergy());
-        assertNotEquals(dino1.getWalkingSpeed(), dino2.getWalkingSpeed());
+        assertTrue(dino1.getWalkingSpeed() > dino2.getWalkingSpeed());
 
     }
+
+    /**
+     * Tests the sleep method, makes sure the energy
+     * increases correctly based of how many hours
+     * the dinosaur slept
+     */
 
     @Test
     public void testSleep(){
