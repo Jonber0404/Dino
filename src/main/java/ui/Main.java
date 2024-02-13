@@ -1,7 +1,26 @@
 package ui;
 
-public class Main {
-    public static void main(String[] args) {
+import java.util.Scanner;
 
+public class Main {
+    private void pterosaur() {}
+    private void sauropod() {}
+    private void theropod() {}
+
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+
+            System.out.println("Select dinosaur: \n1. Pterosaur\n2. Sauropod\n3. Theropod");
+            String answer = scanner.nextLine();
+
+            switch (answer) {
+                case "1" -> pterosaur();
+                case "2" -> sauropod();
+                case "3" -> theropod();
+            }
+
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
 }
