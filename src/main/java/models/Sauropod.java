@@ -23,8 +23,8 @@ public class Sauropod extends Dinosaur {
      * below it cannot walk.
      */
     public void walk(){
-        if(getEnergy() > 0){
-            if (getEnergy() >= 50 && getEnergy() <= 100){
+        if(getEnergy() > 20){
+            if (getEnergy() >= 20 && getEnergy() <= 100){
                 if(age > 50) {
                     walkingSpeed = walkingSpeed + 3;
                 }
@@ -32,7 +32,7 @@ public class Sauropod extends Dinosaur {
                     walkingSpeed = walkingSpeed + 5;
                 }
             }
-            else if (getEnergy() > 0 && getEnergy() < 50) {
+            else if (getEnergy() > 20 && getEnergy() < 50) {
                 if(age > 50) {
                     walkingSpeed = walkingSpeed - 3;
                 }
@@ -52,6 +52,7 @@ public class Sauropod extends Dinosaur {
      * @param hours amount of time it sleeps.
      */
     public void sleep(int hours){
+        walkingSpeed = 0;
         setEnergy(getEnergy() + (5 * hours));
         if(getEnergy() > 100){
             setEnergy(100);
@@ -80,5 +81,14 @@ public class Sauropod extends Dinosaur {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Sauropod name: " + getName() +
+                "\nEats: " + "Plants" +
+                "\nNeck length: " + neckLength + "meters" +
+                "\nWalking speed: " + walkingSpeed + "km/h" +
+                "\nAge: " + age;
     }
 }

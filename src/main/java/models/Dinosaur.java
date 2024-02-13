@@ -64,4 +64,20 @@ public abstract class Dinosaur {
     public int hashCode() {
         return Objects.hash(name, herbivore, carnivore, omnivore, getEnergy());
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isHerbivore() {
+        return herbivore;
+    }
+
+    public boolean isCarnivore() {
+        return carnivore;
+    }
+
+    public boolean isOmnivore() {
+        return omnivore;
+    }
 }
