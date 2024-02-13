@@ -13,6 +13,7 @@ public class Main {
         sauro.setEnergy(50);
         while(true) {
             while(true) {
+                System.out.println("This is the Diplodocus: " + sauro);
                 System.out.println("\nWhat do you want it to do?\n1. Walk\n2. Eat\n3. Sleep\n4. Exit");
                 int answer = scanner.nextInt();
 
