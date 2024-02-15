@@ -185,26 +185,26 @@ public class Main {
 
         while (true) {
             System.out.println("\nChoose action\n1. Info\n2. Hunt\n3. Eat\n4. Sleep\n5. Exit");
-            String answer = scanner.nextLine();
+            int answer = scanner.nextInt();
 
             switch (answer) {
-                case "1":
+                case 1:
                     System.out.println(theropod);
                     break;
-                case "2":
+                case 2:
                     theropod.hunt();
                     break;
-                case "3":
+                case 3:
                     theropod.eat(FoodType.MEAT);
                     System.out.println("The Theropod feasts on meat.");
                     break;
-                case "4":
+                case 4:
                     System.out.println("How many hours does the Theropod want to sleep?");
                     int hours = scanner.nextInt();
                     theropod.sleep(hours);
                     System.out.println("The Theropod sleeps deeply.");
                     break;
-                case "5":
+                case 5:
                     System.out.println("Exiting Theropod simulation.");
                     return;
                 default:
